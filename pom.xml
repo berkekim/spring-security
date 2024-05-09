@@ -14,4 +14,16 @@
     <name>spring-security</name>
     <description>Learning Trail for Spring Security</description>
 
+    <developers>
+        <developer>
+            <id>bep</id>
+            <name>Berk Ekim Pasmakoglu</name>
+            <email>berkekim@gmail.com</email>
+            <url>https://www.linkedin.com/in/berk-ekim-pasmakoglu/</url>
+        </developer>
+    </developers>
+
+    <modules>
+        <module>01-securing-a-web-application</module>
+    </modules>
 </project>
