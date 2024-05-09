@@ -16,3 +16,9 @@ Source Guide: [Securing a Web Application](https://spring.io/guides/gs/securing-
 Source Repository: [gs-securing-web](https://github.com/spring-guides/gs-securing-web/blob/main/complete/pom.xml)
 
 ---
+
+<parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.2.5</version>
+    </parent>

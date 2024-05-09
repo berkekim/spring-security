@@ -5,11 +5,33 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>learning.trail</groupId>
-        <artifactId>spring-security</artifactId>
+        <artifactId>learning-trail-parent</artifactId>
         <version>0.0.1</version>
+        <relativePath>../learning-trail-parent/pom.xml</relativePath>
     </parent>
     <artifactId>01-securing-a-web-application</artifactId>
     <version>0.0.1</version>
+    <description>Securing a Web Application Module </description>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+    </dependencies>
 
     <developers>
         <developer>
