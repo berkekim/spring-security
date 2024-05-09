@@ -9,16 +9,14 @@ Spring Security is a powerful and highly customizable authentication and access-
 --- 
 
 ### Securing a Web Application
-This modules creates a simple web application with resources that are protected by Spring Security. We build a Spring MVC application that secures the page with a login form that is backed by a fixed list of users.
+This module creates a simple web application with resources that are protected by Spring Security. We build a Spring MVC application that secures the page with a login form that is backed by a fixed list of users.
 
-Source Guide: [Securing a Web Application](https://spring.io/guides/gs/securing-web)
+> #### Implementation Notes
+>  If Spring Security is on the classpath, Spring Boot automatically secures all HTTP endpoints with “basic” authentication. However, you can further customize the security settings.
 
-Source Repository: [gs-securing-web](https://github.com/spring-guides/gs-securing-web/blob/main/complete/pom.xml)
+| Source            | URL                                                                                            |
+|:------------------|:-----------------------------------------------------------------------------------------------|
+| Guide             | [Securing a Web Application](https://spring.io/guides/gs/securing-web)                         |
+| GitHub Repository | [gs-securing-web](https://github.com/spring-guides/gs-securing-web/blob/main/complete/pom.xml) |
 
 ---
-
-<parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.2.5</version>
-    </parent>
