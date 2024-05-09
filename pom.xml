@@ -24,6 +24,7 @@
     </developers>
 
     <modules>
+        <module>learning-trail-parent</module>
         <module>01-securing-a-web-application</module>
     </modules>
 </project>

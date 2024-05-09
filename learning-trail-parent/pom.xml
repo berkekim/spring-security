@@ -8,15 +8,6 @@
         <artifactId>spring-security</artifactId>
         <version>0.0.1</version>
     </parent>
-    <artifactId>01-securing-a-web-application</artifactId>
+    <artifactId>learning-trail-parent</artifactId>
     <version>0.0.1</version>
-
-    <developers>
-        <developer>
-            <id>bep</id>
-            <name>Berk Ekim Pasmakoglu</name>
-            <email>berkekim@gmail.com</email>
-            <url>https://www.linkedin.com/in/berk-ekim-pasmakoglu/</url>
-        </developer>
-    </developers>
 </project>
