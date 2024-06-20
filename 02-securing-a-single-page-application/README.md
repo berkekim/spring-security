@@ -33,7 +33,8 @@ java -jar target/02-securing-a-single-page-application-0.0.1.jar
 
 ---
 
-| Source            | URL                                                                                              |
-|:------------------|:-------------------------------------------------------------------------------------------------|
-| Guide             | [Spring Security and Angular](https://spring.io/guides/tutorials/spring-security-and-angular-js) |
-| GitHub Repository | [gs-securing-web](https://github.com/spring-guides/tut-spring-security-and-angular-js/tree/main)   |
+| Source                                                                                                            | URL                                                                                                     |
+|:------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------|
+| Guide                                                                                                             | [Spring Security and Angular](https://spring.io/guides/tutorials/spring-security-and-angular-js)        |
+| GitHub Repository                                                                                                 | [gs-securing-web](https://github.com/spring-guides/tut-spring-security-and-angular-js/tree/main)        |
+| Quick tutorial on how to create a Spring Boot app with Angular front end using Maven and modern front end tooling | [Creating a New Application with Spring Boot and Angular](https://github.com/dsyer/spring-boot-angular) |
