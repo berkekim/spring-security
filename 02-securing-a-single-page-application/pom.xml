@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>learning.trail</groupId>
+        <artifactId>learning-trail-parent</artifactId>
+        <version>0.0.1</version>
+        <relativePath>../learning-trail-parent/pom.xml</relativePath>
+    </parent>
+
+    <artifactId>02-securing-a-single-page-application</artifactId>
+    <version>0.0.1</version>
+    <description>Securing a Single Page Application with Angular Module</description>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+    </dependencies>
+
+    <developers>
+        <developer>
+            <id>bep</id>
+            <name>Berk Ekim Pasmakoglu</name>
+            <email>berkekim@gmail.com</email>
+            <url>https://www.linkedin.com/in/berk-ekim-pasmakoglu/</url>
+        </developer>
+    </developers>
+</project>

@@ -21,5 +21,6 @@
     <modules>
         <module>learning-trail-parent</module>
         <module>01-securing-a-web-application</module>
+        <module>02-securing-a-single-page-application</module>
     </modules>
 </project>
