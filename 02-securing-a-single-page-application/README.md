@@ -12,16 +12,22 @@ referred to as a REST API).
 --- 
 
 > ## Implementation Notes
-> * TBD
+> * It's essential to run the `add_bootstrap.sh` (under the `src/main/frontend` path) script to add Twitter's `Bootstrap` library which will make the web project look more fancy. You have to run it just after the application build is completed.
 
---- 
+---
 
-#### How to Build the Application
+#### How to Run the Angular Application at the Frontend
+```bash
+ng serve
+```
+To see other details about frontend application, please pay a visit to its own [README](./src/main/frontend/README.md) file.
+
+#### How to Build the Java Application at the Backend
 ```bash
 ./mvnw clean package
 ```
 
-#### How to Run the Application
+#### How to Run the Java Application at the Backend
 ```bash
 ./mvnw spring-boot:run
 ```
