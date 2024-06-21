@@ -33,8 +33,23 @@ java -jar target/02-securing-a-single-page-application-0.0.1.jar
 
 ---
 
-| Source                                                                                                            | URL                                                                                                     |
-|:------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------|
-| Guide                                                                                                             | [Spring Security and Angular](https://spring.io/guides/tutorials/spring-security-and-angular-js)        |
-| GitHub Repository                                                                                                 | [gs-securing-web](https://github.com/spring-guides/tut-spring-security-and-angular-js/tree/main)        |
-| Quick tutorial on how to create a Spring Boot app with Angular front end using Maven and modern front end tooling | [Creating a New Application with Spring Boot and Angular](https://github.com/dsyer/spring-boot-angular) |
+## Sources
+**Spring Security and Angular** - `Guide`
+> * _A tutorial on how to use Spring Security with a single page application with various backend architectures, ranging from a simple single server to an API gateway with OAuth2 authentication._
+> * [Source](https://spring.io/guides/tutorials/spring-security-and-angular-js) 
+
+> * Spring Security and Angular - `GitHub Repository`
+> * [Source](https://github.com/spring-guides/tut-spring-security-and-angular-js/tree/main)
+
+**Creating a New Application with Spring Boot and Angular** - `Tutorial`
+> * _Quick tutorial on how to create a Spring Boot app with Angular front end using Maven and modern front end tooling._                                                                     
+> * [Source](https://github.com/dsyer/spring-boot-angular)
+
+**Eirik Sletteberg's Maven Front-end Plugin** - `GitHub Repository`
+> * _A plugin which downloads and installs Node and NPM locally for your project, runs `npm install`, and then any combination of Bower, Grunt, Gulp, Jspm, Karma, or Webpack._        
+> * [Source](https://github.com/eirslett/frontend-maven-plugin)         
+
+**Enabling Cross Origin Requests for a RESTful Web Service** - `Guide`
+> * _This guide walks you through the process of creating a “Hello, World” RESTful web service with Spring that includes headers for Cross-Origin Resource Sharing (CORS) in the response._
+> * [Source](https://spring.io/guides/gs/rest-service-cors)
+
