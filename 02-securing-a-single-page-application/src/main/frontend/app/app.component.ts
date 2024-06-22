@@ -1,20 +1,21 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {Component} from '@angular/core';
+import {RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
 import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterLinkActive, RouterLink, RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'Grasshopper';
-  data = {}  as any;
+  data = {} as any;
+
   constructor(private http: HttpClient) {
     this.data.id = "No id retrieved yet"
-    this.data.content = "No content found yet"  ;
+    this.data.content = "No content found yet";
     this.http = http;
   }
 
