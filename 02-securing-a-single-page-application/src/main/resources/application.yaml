@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: securing-a-single-page-application
+  profiles:
+    active: dev

@@ -13,5 +13,7 @@ public class CrossOriginResourceSharingConfiguration implements WebMvcConfigurer
         Objects.requireNonNull(registry, "registry can not be null")
             .addMapping("/resources")
             .allowedOrigins("http://localhost:4200");
+        registry.addMapping("/users")
+            .allowedOrigins("http://localhost:4200");
     }
 }

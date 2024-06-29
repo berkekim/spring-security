@@ -1,22 +1,6 @@
 <main>
-  <div>
-    <div style="border-style: solid; border-width: 1px">
-      <h4>Hello, {{ title }}.</h4>
-      <p>Congratulations! Your app is running. 🎉</p>
-    </div>
-    <div style="border-style: solid; border-width: 1px">
-      <h4>Consuming 'insecure' backend API</h4>
-      <button name="GetDataButton" (click)="getData()">Get Data</button>
-      <p><strong>Id: </strong><span><i>{{ data.id }}</i></span></p>
-      <p><strong>Message: </strong><span><i>{{ data.content }}</i></span></p>
-    </div>
-    <div style="border-style: solid; border-width: 1px">
-      <h4>Consuming 'secure' backend API</h4>
-      <ul>
-        <li><a routerLinkActive="active" routerLink="/home">Home</a></li>
-        <li><a routerLinkActive="active" routerLink="/login">Login</a></li>
-      </ul>
-    </div>
-  </div>
+  <app-header></app-header>
 </main>
-<router-outlet/>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
