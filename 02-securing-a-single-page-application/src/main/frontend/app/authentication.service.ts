@@ -3,14 +3,16 @@ import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {Router} from "@angular/router";
 import {Credentials} from "./login.component";
 import {map, Observable, of} from "rxjs";
+import {SharedData} from "./shared.data";
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthenticationService {
-  constructor(private httpClient: HttpClient, private router: Router) {
+  constructor(private httpClient: HttpClient, private router: Router, private sharedData: SharedData) {
     this.httpClient = httpClient;
     this.router = router;
+    this.sharedData = sharedData;
   }
 
   authenticate(credentials: Credentials): Observable<Authentication> {
@@ -30,6 +32,7 @@ export class AuthenticationService {
   logout() {
     this.httpClient.post('logout', {})
       .subscribe(value => {
+        this.sharedData.writeAuthentication(Authentication.noOpAuthenticationWithMessage("Authentication logged out!"));
         this.router.navigateByUrl('/login');
       });
   }
