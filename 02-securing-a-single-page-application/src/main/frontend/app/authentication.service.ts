@@ -4,11 +4,14 @@ import {Router} from "@angular/router";
 import {Credentials} from "./login.component";
 import {map, Observable, of} from "rxjs";
 import {SharedData} from "./shared.data";
+import {ArgumentPreconditions} from "./argument.preconditions";
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthenticationService {
+  authenticationConstructsFactory: AuthenticationConstructsFactory = new AuthenticationConstructsFactory();
+
   constructor(private httpClient: HttpClient, private router: Router, private sharedData: SharedData) {
     this.httpClient = httpClient;
     this.router = router;
@@ -21,11 +24,8 @@ export class AuthenticationService {
   }
 
   private doAuthenticate(credentials: Credentials): Observable<Authentication> {
-    const headers = new HttpHeaders(credentials ? {
-      authorization: 'Basic ' + btoa(credentials.username + ':' + credentials.password)
-    } : {});
-
-    return this.httpClient.get<User>('http://localhost:8080/users', {headers: headers})
+    return this.httpClient.get<User>('http://localhost:8080/users',
+      {headers: this.authenticationConstructsFactory.createHttpHeadersForBasicAuthentication(credentials)})
       .pipe(map(user => Authentication.withUsername(user.principal.username)));
   }
 
@@ -73,5 +73,37 @@ export class Authentication {
 
   static noOpAuthenticationWithMessage(message: string) {
     return new Authentication("no-username", false, message);
+  }
+}
+
+export interface Base64EncodingStrategy {
+  encode(credentials: Credentials): string;
+}
+
+export class LegacyBase64EncodingStrategy implements Base64EncodingStrategy {
+  encode(credentials: Credentials): string {
+    return btoa(credentials.username + ':' + credentials.password);
+  }
+}
+
+export class BufferedBase64EncodingStrategy implements Base64EncodingStrategy {
+  encode(credentials: Credentials): string {
+    return Buffer.from(credentials.username + ':' + credentials.password, 'base64')
+      .toString('base64');
+  }
+}
+
+export class AuthenticationConstructsFactory {
+  private base64EncodingStrategy: Base64EncodingStrategy = new LegacyBase64EncodingStrategy();
+
+  setBase64EncodingStrategy(value: Base64EncodingStrategy) {
+    this.base64EncodingStrategy = value;
+  }
+
+  createHttpHeadersForBasicAuthentication(credentials: Credentials) {
+    ArgumentPreconditions.requireNonNull("Authentication credentials must be provided", credentials);
+    return new HttpHeaders(credentials ? {
+      authorization: 'Basic ' + this.base64EncodingStrategy.encode(credentials)
+    } : {});
   }
 }
