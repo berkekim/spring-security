@@ -5,4 +5,4 @@ Spring Security is a powerful and highly customizable authentication and access-
 
 ## Modules
 1. [Securing a Web Application](./01-securing-a-web-application/README.md)
-
+2. [Securing a Single Page Application](./02-securing-a-single-page-application/README.md)
