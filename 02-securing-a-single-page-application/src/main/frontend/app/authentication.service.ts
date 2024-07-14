@@ -30,10 +30,15 @@ export class AuthenticationService {
   }
 
   logout() {
-    this.httpClient.post('logout', {})
-      .subscribe(value => {
-        this.sharedData.writeAuthentication(Authentication.noOpAuthenticationWithMessage("Authentication logged out!"));
-        this.router.navigateByUrl('/login');
+    this.httpClient.post('http://localhost:8080/logout', {})
+      .subscribe({
+        next: value => {
+          this.sharedData.writeAuthentication(Authentication.noOpAuthenticationWithMessage("Authentication logged out!"));
+          this.router.navigateByUrl('/login');
+        },
+        error: error => {
+          console.log(error);
+        }
       });
   }
 }

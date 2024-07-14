@@ -8,12 +8,16 @@ import java.util.Objects;
 
 @Configuration
 public class CrossOriginResourceSharingConfiguration implements WebMvcConfigurer {
+    private static final String APPLICATION_HOST = "http://localhost:4200";
+
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         Objects.requireNonNull(registry, "registry can not be null")
             .addMapping("/resources")
-            .allowedOrigins("http://localhost:4200");
+            .allowedOrigins(APPLICATION_HOST);
         registry.addMapping("/users")
-            .allowedOrigins("http://localhost:4200");
+            .allowedOrigins(APPLICATION_HOST);
+        registry.addMapping("/logout")
+            .allowedOrigins(APPLICATION_HOST);
     }
 }

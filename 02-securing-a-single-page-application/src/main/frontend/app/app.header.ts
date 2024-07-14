@@ -1,5 +1,7 @@
 import {Component} from '@angular/core';
 import {RouterLink, RouterLinkActive} from "@angular/router";
+import {AuthenticationService} from "./authentication.service";
+import {SharedData} from "./shared.data";
 
 @Component({
   selector: 'app-header',
@@ -10,4 +12,15 @@ import {RouterLink, RouterLinkActive} from "@angular/router";
   ],
   templateUrl: './app.header.html'
 })
-export class AppHeader {}
+export class AppHeader {
+  sharedData: SharedData;
+
+  constructor(private authenticationService: AuthenticationService, sharedData: SharedData) {
+    this.authenticationService = authenticationService;
+    this.sharedData = sharedData;
+  }
+
+  logout() {
+    this.authenticationService.logout();
+  }
+}
