@@ -37,6 +37,12 @@ OR
 java -jar target/02-securing-a-single-page-application-0.0.1.jar
 ```
 
+OR here is my **favorite** one:
+
+```bash
+./mvnw clean compile spring-boot:run --projects 02-securing-a-single-page-application
+```
+
 ---
 
 ## Sources
